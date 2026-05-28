@@ -2,42 +2,46 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SOPFEU</title>
  
-    <style>
-
-        body {
-
-            margin: 0;
-
-            background: transparent;
-
-            overflow: hidden;
-
-        }
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: black;
+    }
  
-        #sopfeu-widget-container {
-
-            width: 100vw;
-
-            height: 100vh;
-
-        }
+    /* Zone visible (viewport signage) */
+    #viewport {
+        width: 500px;
+        height: 140px;
+        overflow: hidden;
+        position: relative;
+    }
+ 
+    /* Widget qu'on décale pour couper le haut/gauche */
+    #sopfeu-widget-container {
+        position: absolute;
+        top: -103px;   /* ajuste ici */
+        left: -25px; /* ajuste ici */
+		right: -80px;
+        width: 2100px; /* un peu plus grand pour compenser le crop */
+        height: 1200px;
+    }
 </style>
 </head>
+ 
 <body>
  
+<div id="viewport">
 <div
-
-    data-sopfeu-lng="fr_CA"
-
-    data-sopfeu-media="20"
-
-    data-sopfeu-responsive="false"
-
-    id="sopfeu-widget-container">
+        id="sopfeu-widget-container"
+        data-sopfeu-lng="fr_CA"
+        data-sopfeu-media="20"
+        data-sopfeu-responsive="true"
+>
 <span id="sopfeu-widget-loader"></span>
+</div>
 </div>
  
 <script src="https://www.sopfeu.qc.ca/sopfeu-widget.js"></script>
