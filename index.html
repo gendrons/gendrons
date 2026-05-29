@@ -9,6 +9,13 @@
         padding: 0;
         overflow: hidden;
         background: black;
+ 
+        width: 100%;
+        height: 100%;
+ 
+        display: flex;
+        justify-content: center; /* horizontal center */
+        align-items: center;     /* vertical center */
     }
  
     /* Zone visible (viewport signage) */
@@ -22,10 +29,10 @@
     /* Widget qu'on décale pour couper le haut/gauche */
     #sopfeu-widget-container {
         position: absolute;
-        top: -103px;   /* ajuste ici */
-        left: -25px; /* ajuste ici */
-		right: -80px;
-        width: 2100px; /* un peu plus grand pour compenser le crop */
+        top: -103px;
+        left: -25px;
+        right: -80px;
+        width: 2100px;
         height: 1200px;
     }
 </style>
